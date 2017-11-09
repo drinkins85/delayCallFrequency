@@ -3,11 +3,11 @@
 #### Предложите общее решение, которое позволит вызывать любую функцию не чаще N раз в секунду, даже если её вызов происходит чаще.
 
 ```
-/*
+/**
  Вызывает функцию не чаще указанное количество раз в указанный интервал
- @param {Function} Функция
- @param {Number} Частота вызова
- @param {Number} Интервал
+ @param {Function} func Функция
+ @param {Number} [frequency=1] Частота вызова
+ @param {Number} [timeout=1000] Интервал
  @return {Function}
  */
 function delayCallFrequency(func, frequency = 1, timeout = 1000) {
